@@ -19,29 +19,54 @@ inquirer
     },
     {
         type: 'input',
-        message: 'Please enter your project installation requirements',
-        name: 'installation_req',
+        message: 'What are the steps required to install your project?',
+        name: 'installation',
     },
     {
         type: 'input',
-        message: 'Please provide instructions for use',
-        name: 'instructions',
+        message: 'Please provide instructions and examples for use.',
+        name: 'usage',
     },
     {
         type: 'input',
-        message: 'Please provide contribution guidelines',
-        name: 'contribution',
+        message: 'Please list your collaborators or third-party assets that require attribution.',
+        name: 'credits',
+    },
+    {
+      type: 'checkbox',
+      message: 'Please choose a license.',
+      choices: [
+        'Apache 2.0',
+        'BSD',
+        'GNU',
+        'ISC',
+        'MIT',
+        'None',
+        'The Unlicense',
+      ],
     },
     {
         type: 'input',
-        message: 'Please provide test instructions',
+        message: 'Guidelines for other developers to contribute',
+        name: 'contributing',
+        default: 'We are working on our guidelines.'
+    },
+    {
+        type: 'input',
+        message: 'Please provide test instructions.',
         name: 'test_instructions',
     },
     {
-        type: 'input',
-        message: 'Credits',
-        name: 'credits',
+      type: 'input',
+      message: 'What is your GitHub user name?',
+      name: 'github_name',
     },
+    {
+      type: 'input',
+      message: 'What is your email address?',
+      name: 'email_address',
+    },
+
   ])
 
   .then((answers) => {
