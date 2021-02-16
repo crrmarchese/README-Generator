@@ -21,16 +21,19 @@ inquirer
         type: 'input',
         message: 'What are the steps required to install your project?',
         name: 'installation',
+        default: '',
     },
     {
         type: 'input',
         message: 'Please provide instructions and examples for use.',
         name: 'usage',
+        default: '',
     },
     {
         type: 'input',
         message: 'Please list your collaborators or third-party assets that require attribution.',
         name: 'credits',
+        default: '',
     },
     {
       type: 'checkbox',
@@ -49,43 +52,63 @@ inquirer
         type: 'input',
         message: 'Guidelines for other developers to contribute',
         name: 'contributing',
-        default: 'We are working on our guidelines.'
+        default: '',
     },
     {
         type: 'input',
         message: 'Please provide test instructions.',
         name: 'test_instructions',
+        default: '',
     },
     {
-      type: 'input',
-      message: 'What is your GitHub user name?',
-      name: 'github_name',
+        type: 'input',
+        message: 'What is your GitHub user name?',
+        name: 'github_name',
+        default: '',
     },
     {
-      type: 'input',
-      message: 'What is your email address?',
-      name: 'email_address',
+        type: 'input',
+        message: 'What is your email address?',
+        name: 'email_address',
+        default: '',
     },
 
   ])
-
+ 
+  // Answers stores the input from the user in an object
   .then((answers) => {
-    const htmlPageContent = generateHTML(answers);
+    
+    const readMeContent = `
+    # ${answers.project_name}
 
-    fs.writeFile('index.html', htmlPageContent, (err) =>
-      err ? console.log(err) : console.log('Successfully created index.html!')
+    ## Description
+    ${answers.project_description}
+
+    ## Table of Contents
+    * [Installation](#installation)
+    * [Usage](#usage)
+    * [Credits](#credits)
+    * [License](#license)
+    * [Contributing](#contributing)
+    * [Tests](#tests)
+    * [Questions](#questions)
+  
+    ## Installation
+    ${answers.installation}
+
+    ## Usage
+    ${answers.usage}
+
+    ## Credits
+    ${answers.credits}
+
+    
+    `;
+
+    fs.writeFile('README.md', readMeContent, (err) =>
+      err ? console.log(err) : console.log('Successfully created README.md!')
     );
   });
-
-
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();
 
 
 
