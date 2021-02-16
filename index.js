@@ -38,6 +38,7 @@ inquirer
     {
       type: 'checkbox',
       message: 'Please choose a license.',
+      name: 'license',
       choices: [
         'Apache 2.0',
         'BSD',
@@ -100,9 +101,26 @@ inquirer
     ${answers.usage}
 
     ## Credits
+    List of Collaborators and/or Attributions:
     ${answers.credits}
 
-    
+    ## License
+    This project is licensed under ${answers.license}
+
+    ## Contributing
+    ${answers.contributing}
+
+    ## Tests
+    Here are some examples on how to run tests:
+    ${answers.test_instructions}
+
+    ## Questions
+     * Check out my GitHub profile at:
+     https://github.com/${answers.github_name}
+
+     * Contact information:
+     email: ${answers.email_address}
+
     `;
 
     fs.writeFile('README.md', readMeContent, (err) =>
