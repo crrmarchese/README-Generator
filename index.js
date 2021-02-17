@@ -80,48 +80,50 @@ inquirer
   .then((answers) => {
     
     const readMeContent = `
-    # ${answers.project_name}
+# ${answers.project_name}
 
-    ## Description
-    ${answers.project_description}
+## Description
+![license](https://img.shields.io/badge/License-${answers.license}-orange.svg "License Badge")
 
-    ## Table of Contents
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [Credits](#credits)
-    * [License](#license)
-    * [Contributing](#contributing)
-    * [Tests](#tests)
-    * [Questions](#questions)
+  ${answers.project_description}
+
+## Table of Contents
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Credits](#credits)
+  * [License](#license)
+  * [Contributing](#contributing)
+  * [Tests](#tests)
+  * [Questions](#questions)
   
-    ## Installation
-    ${answers.installation}
+## Installation
+  ${answers.installation}
 
-    ## Usage
-    ${answers.usage}
+## Usage
+  ${answers.usage}
 
-    ## Credits
-    List of Collaborators and/or Attributions:
-    ${answers.credits}
+## Credits
+  List of Collaborators and/or Attributions:
+  ${answers.credits}
 
-    ## License
-    This project is licensed under ${answers.license}
+## License
+  This project is licensed under ${answers.license}
 
-    ## Contributing
-    ${answers.contributing}
+## Contributing
+  ${answers.contributing}
 
-    ## Tests
-    Here are some examples on how to run tests:
-    ${answers.test_instructions}
+## Tests
+  Here are some examples on how to run tests:
+  ${answers.test_instructions}
 
-    ## Questions
-     * Check out my GitHub profile at:
-     https://github.com/${answers.github_name}
+## Questions
+  * Check out my GitHub profile at:
+    https://github.com/${answers.github_name}
 
-     * Contact information:
-     email: ${answers.email_address}
+  * Contact information:
+    email: ${answers.email_address}
 
-    `;
+  `;
 
     fs.writeFile('README.md', readMeContent, (err) =>
       err ? console.log(err) : console.log('Successfully created README.md!')
