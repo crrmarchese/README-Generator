@@ -21,19 +21,19 @@ inquirer
         type: 'input',
         message: 'What are the steps required to install your project?',
         name: 'installation',
-        default: '',
+        default: 'Enter to leave blank',
     },
     {
         type: 'input',
         message: 'Please provide instructions and examples for use.',
         name: 'usage',
-        default: '',
+        default: 'Enter to leave blank',
     },
     {
         type: 'input',
         message: 'Please list your collaborators or third-party assets that require attribution.',
         name: 'credits',
-        default: '',
+        default: 'Enter to leave blank',
     },
     {
       type: 'checkbox',
@@ -53,25 +53,25 @@ inquirer
         type: 'input',
         message: 'Guidelines for other developers to contribute',
         name: 'contributing',
-        default: '',
+        default: 'Enter to leave blank',
     },
     {
         type: 'input',
         message: 'Please provide test instructions.',
         name: 'test_instructions',
-        default: '',
+        default: 'Enter to leave blank',
     },
     {
         type: 'input',
         message: 'What is your GitHub user name?',
         name: 'github_name',
-        default: '',
+        default: 'Enter to leave blank',
     },
     {
         type: 'input',
         message: 'What is your email address?',
         name: 'email_address',
-        default: '',
+        default: 'Enter to leave blank',
     },
 
   ])
@@ -83,7 +83,7 @@ inquirer
 # ${answers.project_name}
 
 ## Description
-![license](https://img.shields.io/badge/License-${answers.license}-orange.svg "License Badge")
+![license](https://img.shields.io/badge/license-${answers.license}-orange.svg "License Badge")
 
   ${answers.project_description}
 
