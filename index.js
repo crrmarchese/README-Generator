@@ -2,6 +2,12 @@
 const inquirer = require('inquirer');
 // Include Node.js built-in File System package
 const fs = require('fs');
+const requiredQuestion = async (input) => {
+  if (input === "") {
+     return 'This question is required';
+  }
+  return true;
+};
 
 // Questions for user input
 
@@ -11,29 +17,29 @@ inquirer
         type: 'input',
         message: 'What is the name of your project?',
         name: 'project_name',
+        validate: requiredQuestion,
     },
     {
         type: 'input',
         message: 'Please provide a description of your project.',
         name: 'project_description',
+        validate: requiredQuestion,
     },
     {
         type: 'input',
         message: 'What are the steps required to install your project?',
         name: 'installation',
-        default: 'Enter to leave blank',
+        default: 'There are no specific instructions',
     },
     {
         type: 'input',
         message: 'Please provide instructions and examples for use.',
         name: 'usage',
-        default: 'Enter to leave blank',
     },
     {
         type: 'input',
         message: 'Please list your collaborators or third-party assets that require attribution.',
         name: 'credits',
-        default: 'Enter to leave blank',
     },
     {
       type: 'checkbox',
@@ -48,30 +54,28 @@ inquirer
         'None',
         'The Unlicense',
       ],
+      validate: requiredQuestion,
     },
     {
         type: 'input',
         message: 'Guidelines for other developers to contribute',
         name: 'contributing',
-        default: 'Enter to leave blank',
     },
     {
         type: 'input',
         message: 'Please provide test instructions.',
         name: 'test_instructions',
-        default: 'Enter to leave blank',
+        default: 'No test instructions at this time.',
     },
     {
         type: 'input',
         message: 'What is your GitHub user name?',
         name: 'github_name',
-        default: 'Enter to leave blank',
     },
     {
         type: 'input',
         message: 'What is your email address?',
         name: 'email_address',
-        default: 'Enter to leave blank',
     },
 
   ])
