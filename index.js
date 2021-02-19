@@ -29,7 +29,7 @@ inquirer
         type: 'input',
         message: 'What are the steps required to install your project?',
         name: 'installation',
-        default: 'There are no specific instructions',
+        default: 'There are no specific installation instructions.',
     },
     {
         type: 'input',
@@ -58,7 +58,7 @@ inquirer
     },
     {
         type: 'input',
-        message: 'Guidelines for other developers to contribute',
+        message: 'Guidelines for other developers to contribute.',
         name: 'contributing',
     },
     {
@@ -117,7 +117,7 @@ inquirer
   ${answers.contributing}
 
 ## Tests
-  Here are some examples on how to run tests:
+  How to run tests:
   ${answers.test_instructions}
 
 ## Questions
@@ -125,12 +125,12 @@ inquirer
     https://github.com/${answers.github_name}
 
   * Contact information:
-    email: ${answers.email_address}
+    ${answers.email_address}
 
   `;
 
-    fs.writeFile('README.md', readMeContent, (err) =>
-      err ? console.log(err) : console.log('Successfully created README.md!')
+    fs.writeFile('README-demo.md', readMeContent, (err) =>
+      err ? console.log(err) : console.log('Successfully created a README.md!')
     );
   });
 
