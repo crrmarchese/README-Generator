@@ -19,3 +19,6 @@ node index.js
 * Inquirer.js
 * Node.js
 * NPM
+
+## Video 
+[Demo of README Generator](https://drive.google.com/file/d/1u9mR62POW82T1oCh5g9htGCzZgRvxL6X/view?usp=sharing)
