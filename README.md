@@ -21,4 +21,4 @@ node index.js
 * NPM
 
 ## Video 
-[Demo of README Generator](https://drive.google.com/file/d/1u9mR62POW82T1oCh5g9htGCzZgRvxL6X/view?usp=sharing)
+[Demo of README Generator](https://1drv.ms/v/s!AtT3DKFm4NiYg3nLR7brSHnbrUEz)
