@@ -20,5 +20,9 @@ node index.js
 * Node.js
 * NPM
 
-## Video 
-[Demo of README Generator](https://1drv.ms/v/s!AtT3DKFm4NiYg3nLR7brSHnbrUEz)
+## Screenshots 
+![README terminal](./assets/readme-generator-terminal.jpg)
+
+
+![README file](./assets/readme-generator-readmefile.jpg)
+
