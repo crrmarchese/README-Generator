@@ -46,7 +46,7 @@ inquirer
       message: 'Please choose a license.',
       name: 'license',
       choices: [
-        'Apache 2.0',
+        'Apache',
         'BSD',
         'GNU',
         'ISC',
