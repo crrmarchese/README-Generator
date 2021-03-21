@@ -39,7 +39,4 @@
   * Check out my GitHub profile at:
     https://github.com/crrmarchese
 
-  * Contact information:
-    marchesec979@gmail.com
-
   
